@@ -8,13 +8,13 @@ The main objective of this assignment was to become familiar with the Pandas lib
 ## Cleaning Invalid Data - Deliverable 1
 In order to clear Thomas High School's 9th graders' grades, I used the loc method on the student data dataframe (created with pandas'read_csv method for loading the csv data files). Logical operators specified within the loc method allowed me to select all 9th graders' grade in THS and make them equal to NaN with np.nan, as shown in the following screenshot. This process was done twice, first for removing math grades and second for removing reading grades.
 
-* ![Replacing grades with NaN.](resources/screenshot/d1_1.png)
+* ![Replacing grades with NaN.](https://github.com/yaejinpark/school-district-analysis/blob/main/resources/screenshot/d1_1.PNG)
 
 There are two logical operators within each loc methods - the first operator looks for students that are in 9th grade and the second looks for students in THS. The two are connected with an AND, meaning both have to be satisfied in order to indicate that the selected rows indeed represent data from THS 9th graders.
 
 I stored the resulting dataframe in a variable, 'ths_student_data_df', and checked if all 9th graders' grades shown as NaN.
 
-* ![Seems like that worked.](resources/screenshot/d1_2.png)
+* ![Seems like that worked.](https://github.com/yaejinpark/school-district-analysis/blob/main/resources/screenshot/d1_2.PNG)
 
 ## School District Analysis - Deliverable 2
 Merging the two data sets was required in order to do a full analysis of the school and student data, as the two sets contain different columns of data. This was simply done by pandas' merge method, as in line In[40].
@@ -25,15 +25,15 @@ Then I got every school's count of students that are passing in math, reading, o
 
 Getting the count of students allowed me to get the percentage of the passing grades for math, reading, or both as the next step, which can be shown in the district summary dataframe below (Out[47]).
 
-* ![District Summary DataFrame](resources/screenshot/d2_1.png)
+* ![District Summary DataFrame](https://github.com/yaejinpark/school-district-analysis/blob/main/resources/screenshot/d2_1.PNG)
 
 Now, I move on to get THS' summary on student performance and budget. This process is not too different from the process of getting the district summary, as almost same logical operators and pandas methods were used to count valid rows for calculations. I was able to get every school's summary (Out[50]), then singled out THS' row as per the requirement (Out[51]). The THS' row grades have been manually changed by the new grade calculations that don't count the invalid data from the 9th graders (In[57] - In[87]).
 
-* ![All Schools Summary DataFrame](resources/screenshot/d2_2.png)
+* ![All Schools Summary DataFrame](https://github.com/yaejinpark/school-district-analysis/blob/main/resources/screenshot/d2_2.PNG)
 
-* ![THS Summary DataFrame](resources/screenshot/d2_3.png)
+* ![THS Summary DataFrame](https://github.com/yaejinpark/school-district-analysis/blob/main/resources/screenshot/d2_3.PNG)
 
-* ![Manually changing THS Summary](resources/screenshot/d2_4.png)
+* ![Manually changing THS Summary](https://github.com/yaejinpark/school-district-analysis/blob/main/resources/screenshot/d2_4.PNG)
 
 Interestingly, THS' passing math, reading, and overall percentages have boosted after manually correcting the data, but not much change in the actual scores. Maybe this indicates that the instructor who witnessed the academic dishonesty among 9th graders gave them failing grades regardless of the scores.
 
